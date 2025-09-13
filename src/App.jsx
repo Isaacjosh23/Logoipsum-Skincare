@@ -1,5 +1,7 @@
+import Logoipsum from "./Logoipsum";
+
 const App = () => {
-  return;
+  return <Logoipsum />;
 };
 
 export default App;
