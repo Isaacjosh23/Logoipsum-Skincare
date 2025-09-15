@@ -1,3 +1,4 @@
+import Collection from "./components/Collection";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import DesktopNav from "./components/navigation/DesktopNav";
@@ -28,6 +29,8 @@ const Logoipsum = () => {
       </div>
 
       <Partner />
+
+      <Collection />
     </>
   );
 };
