@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const MobileNav = () => {
+const DesktopNav = () => {
   const [navIsOpen, setNavIsOpen] = useState(false);
 
   const handleToggleNav = () => {
@@ -87,4 +87,4 @@ const MobileNav = () => {
   );
 };
 
-export default MobileNav;
+export default DesktopNav;
