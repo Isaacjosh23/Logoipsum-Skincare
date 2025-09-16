@@ -1,6 +1,11 @@
 import MobileNav from "./navigation/MobileNav";
 
-const Header = () => {
+const Header = ({
+  onHomeClick,
+  onPartnerClick,
+  onCollectionClick,
+  onReachClick,
+}) => {
   return (
     <header className="flex items-center justify-between container relative nav-open py-8!">
       <div>
@@ -9,7 +14,12 @@ const Header = () => {
         </a>
       </div>
 
-      <MobileNav />
+      <MobileNav
+        onHomeClick={onHomeClick}
+        onPartnerClick={onPartnerClick}
+        onCollectionClick={onCollectionClick}
+        onReachClick={onReachClick}
+      />
     </header>
   );
 };

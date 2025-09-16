@@ -1,10 +1,11 @@
+import { forwardRef } from "react";
 import Button from "./reusables/Button";
 import Container from "./reusables/Container";
 import Section from "./reusables/Section";
 
-const Hero = () => {
+const Hero = forwardRef((_, externalRef) => {
   return (
-    <Section className="py-20">
+    <Section ref={externalRef} className="py-20">
       <Container className="flex flex-col gap-20">
         <div className="flex flex-col gap-10">
           <div className="flex flex-col md:items-start gap-8">
@@ -14,7 +15,7 @@ const Hero = () => {
                 brands.
               </h1>
 
-              <p className="text-[1.2rem] lg:text-[1.4rem]">
+              <p className="text-xl lg:text-[1.4rem]">
                 Crafting exceptional skincare solutions, enhancing your beauty
                 and well-being.
               </p>
@@ -70,6 +71,6 @@ const Hero = () => {
       </Container>
     </Section>
   );
-};
+});
 
 export default Hero;

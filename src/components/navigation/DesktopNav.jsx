@@ -1,6 +1,11 @@
 import { useState } from "react";
 
-const DesktopNav = () => {
+const DesktopNav = ({
+  onHomeClick,
+  onPartnerClick,
+  onCollectionClick,
+  onReachClick,
+}) => {
   const [navIsOpen, setNavIsOpen] = useState(false);
 
   const handleToggleNav = () => {
@@ -12,11 +17,11 @@ const DesktopNav = () => {
     console.log("clicked");
   };
 
-  // const handleNavClick = (e, callback) => {
-  //   e.preventDefault();
-  //   setNavIsOpen(false);
-  //   callback();
-  // };
+  const handleNavClick = (e, callback) => {
+    e.preventDefault();
+    setNavIsOpen(false);
+    callback();
+  };
 
   return (
     <>
@@ -27,6 +32,7 @@ const DesktopNav = () => {
               <a
                 href="#"
                 className="text-[1.6rem] text-black font-bold hover:underline smooth-trans"
+                onClick={(e) => handleNavClick(e, onHomeClick)}
               >
                 Home
               </a>
@@ -36,6 +42,7 @@ const DesktopNav = () => {
               <a
                 href="#"
                 className="text-[1.6rem] text-black font-bold hover:underline smooth-trans"
+                onClick={(e) => handleNavClick(e, onPartnerClick)}
               >
                 Partner
               </a>
@@ -45,6 +52,7 @@ const DesktopNav = () => {
               <a
                 href="#"
                 className="text-[1.6rem] text-black font-bold hover:underline smooth-trans"
+                onClick={(e) => handleNavClick(e, onCollectionClick)}
               >
                 Collections
               </a>
@@ -54,6 +62,7 @@ const DesktopNav = () => {
               <a
                 href="#"
                 className="text-[1.6rem] text-black font-bold hover:underline smooth-trans"
+                onClick={(e) => handleNavClick(e, onReachClick)}
               >
                 Connect
               </a>

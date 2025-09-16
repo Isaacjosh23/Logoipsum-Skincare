@@ -1,9 +1,10 @@
+import { forwardRef } from "react";
 import Container from "./reusables/Container";
 import Section from "./reusables/Section";
 
-const Partner = () => {
+const Partner = forwardRef((_, externalRef) => {
   return (
-    <Section className="py-40">
+    <Section ref={externalRef} className="py-40">
       <Container className="flex flex-col items-center gap-12 md:flex-row md:relative">
         <div className="flex flex-col gap-4 lg:gap-8">
           <h3 className="text-3xl text-black font-bold lg:text-4xl xl:text-5xl">
@@ -11,7 +12,7 @@ const Partner = () => {
             solutions.
           </h3>
 
-          <p className="text-[1.2rem] lg:text-[1.3rem] xl:text-[1.5rem]">
+          <p className="text-xl lg:text-[1.3rem] xl:text-[1.5rem]">
             Partner with leading skincare brands and agencies to achieve
             transformative results.
           </p>
@@ -59,6 +60,6 @@ const Partner = () => {
       </Container>
     </Section>
   );
-};
+});
 
 export default Partner;

@@ -1,17 +1,18 @@
+import { forwardRef } from "react";
 import Container from "./reusables/Container";
 import Section from "./reusables/Section";
 
-const Collection = () => {
+const Collection = forwardRef((_, externalRef) => {
   return (
-    <Section className="pt-14 pb-20">
+    <Section ref={externalRef} className="pt-14 pb-20">
       <Container className="flex flex-col gap-24 lg:grid lg:grid-cols-1">
         <div className="flex flex-col gap-12 md:gap-20 items-center md:flex-row">
           <div className="flex flex-col gap-10">
-            <h3 className="text-2xl text-black font-semibold md:text-3xl">
+            <h3 className="text-3xl text-black font-semibold md:text-3xl">
               The Skin Care Collection
             </h3>
 
-            <p className="flex flex-col gap-6 md:text-[1.2rem]">
+            <p className="flex flex-col gap-6 text-xl">
               <span className="inline-block">
                 Partner with skincare brands and agencies to achieve remarkable
                 outcomes. By building strong collaborations, we can utilize
@@ -45,11 +46,11 @@ const Collection = () => {
 
         <div className="flex flex-col-reverse gap-12 md:gap-20 items-center md:flex-row-reverse">
           <div className="flex flex-col gap-10">
-            <h3 className="text-2xl text-black font-semibold md:text-3xl">
+            <h3 className="text-3xl text-black font-semibold md:text-3xl">
               The Skin Elixir
             </h3>
 
-            <p className="flex flex-col gap-6 md:text-[1.2rem] ">
+            <p className="flex flex-col gap-6 text-xl ">
               <span className="inline-block">
                 Join forces with skincare brands and agencies to achieve
                 remarkable outcomes. By building strong collaborations, we can
@@ -83,6 +84,6 @@ const Collection = () => {
       </Container>
     </Section>
   );
-};
+});
 
 export default Collection;

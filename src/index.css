@@ -1,9 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
 
-:root {
-}
-
 html {
   font-size: 62.5%;
   overflow-x: hidden;
@@ -50,4 +47,9 @@ body {
 
 .smooth-trans {
   transition: all 0.3s;
+}
+
+.news-cta:hover,
+.news-cta:active {
+  background: rgba(0, 0, 0, 0.8);
 }
